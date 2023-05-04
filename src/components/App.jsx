@@ -1,9 +1,9 @@
-import Statistics from './Statistics/Statistics';
+import Feedback from './Feedback/Feedback';
 
 export const App = () => {
   return (
     <div>
-      <Statistics
+      <Feedback
         initialValueGood={0}
         initialValueNeutral={0}
         initialValueBad={0}
