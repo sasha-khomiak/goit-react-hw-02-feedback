@@ -1,16 +1,11 @@
+import Statistics from './Statistics/Statistics';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <div>
+      <Statistics />
       React homework template1
+      <button onClick={event => console.log(event)}>Click me!</button>
     </div>
   );
 };
