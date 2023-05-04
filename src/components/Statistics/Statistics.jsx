@@ -20,24 +20,36 @@ class Statistics extends React.Component {
     bad: this.props.initialValueBad,
   };
 
+  // обробник натиску кнопки Good
   handleClickGood = () => {
     this.setState(pevstate => {
       return { good: pevstate.good + 1 };
     });
   };
 
+  // обробник натиску кнопки Neutral
   handleClickNeutral = () => {
     this.setState(prevstate => {
       return { neutral: prevstate.neutral + 1 };
     });
   };
 
+  // обробник натиску кнопки Bad
   handleClickBad = () => {
     this.setState(prevstate => {
       return { bad: prevstate.bad + 1 };
     });
   };
 
+  countTotalFeedback = () => {
+    return this.state.bad + this.state.neutral + this.state.good;
+  };
+
+  countPositiveFeedbackPercentage = () => {
+    return Number.parseInt((this.state.good / this.countTotalFeedback()) * 100);
+  };
+
+  // Рендеринг компонента Container
   render() {
     return (
       <Container>
@@ -55,9 +67,12 @@ class Statistics extends React.Component {
         </div>
         <p>Statistics</p>
         <div>
-          <span>{this.state.good}</span>
-          <span>{this.state.neutral}</span>
-          <span>{this.state.bad}</span>
+          <p>Good</p> <span>{this.state.good}</span>
+          <p>Neutral</p> <span>{this.state.neutral}</span>
+          <p>Bad</p> <span>{this.state.bad}</span>
+          <p>Total</p> <span>{this.countTotalFeedback()}</span>
+          <p>Positive feedback</p>{' '}
+          <span>{this.countPositiveFeedbackPercentage()} %</span>
         </div>
       </Container>
     );
