@@ -1,26 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StatisticsWrap, Colum } from './Statistics.styled';
+import { StatisticsWrap, Colum, Option, Result } from './Statistics.styled';
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => {
   return (
     <StatisticsWrap>
       <Colum>
-        <p>Good</p> <span>{good}</span>
+        <Option>Good</Option> <Result>{good}</Result>
       </Colum>
       <Colum>
-        <p>Neutral</p> <span>{neutral}</span>
+        <Option>Neutral</Option> <Result>{neutral}</Result>
       </Colum>
       <Colum>
-        <p>Bad</p> <span>{bad}</span>
+        <Option>Bad</Option> <Result>{bad}</Result>
       </Colum>
       <Colum>
-        <p>Total</p> <span>{total}</span>
+        <Option>Total</Option> <Result>{total}</Result>
       </Colum>
       <Colum>
-        <p>Positive feedback</p>
-        <span>{positivePercentage} %</span>
+        <Option>Positive feedback</Option>
+        <Result>{positivePercentage} %</Result>
       </Colum>
     </StatisticsWrap>
   );
