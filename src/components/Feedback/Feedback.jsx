@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Container } from './Feedback.styled';
 
 // підключення компонентів
-import Statistics from '../Statistics/Statistics';
+import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
 import Section from './Section/Section';
 import Notification from './Notification/Notification';
