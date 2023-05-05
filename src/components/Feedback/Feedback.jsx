@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { Container } from './Feedback.styled';
 
 // підключення компонентів
-import Statistics from './Statistics';
-import FeedbackOptions from './FeedbackOptions';
-import Section from './Section';
-import Notification from './Notification';
-import PersentageLine from './PersentageLine';
+import Statistics from '../Statistics/Statistics';
+import FeedbackOptions from './FeedbackOptions/FeedbackOptions';
+import Section from './Section/Section';
+import Notification from './Notification/Notification';
+import PersentageLine from './PersentageLine/PersentageLine';
 
 // створення компоненту-класу Feedback
 class Feedback extends React.Component {
